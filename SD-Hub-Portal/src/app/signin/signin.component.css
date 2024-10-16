@@ -10,11 +10,41 @@
     width: 300px;
     height: 90px;
     margin:auto;
+
 }
 .content{
-    padding-top: 9%;
-    
+    padding-top: 15%;
+    color: crimson;
+    margin-left: 15px;
+}
+input{
+    color: crimson;
+    width: 92%;
+    height: 25px;
+    /* padding-top: 10px; */
+}
+.head-p{
+ margin-left: 95px;
+ color: aliceblue;
+padding-top: 20px;
+font-style: italic;
+}
+.label{
+    color: crimson; 
+    padding-top:55px ; 
+}
+.forget a{
+    margin-left: 45%;
+    font-size: medium;
 
-
-
+ 
+}
+.login-btn{
+    text-align: center;
+    width: 92%;
+}
+.login-btn button{
+    background-color: crimson;
+    width: 102%;
+    color: antiquewhite;
 }
