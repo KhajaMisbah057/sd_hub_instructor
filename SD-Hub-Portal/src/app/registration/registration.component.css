@@ -1,4 +1,143 @@
-.studentid{
-    padding: 10px;
-    width: 45%;
+/* Main Logo Header */
+
+.register-main{
+    height: 113%;
+    width: 50%;
+    border: 1px solid #DC143C;
+    margin: auto;
+    margin-top: 50px;
+
+    
+}
+.head-login{
+    height: 120px;
+    background-color: #DC143C;
+    display: flex;
+    align-items: center;
+
+
+}
+.img img{
+    height: 80px;
+    width: 80px;
+    margin-left: 20px;
+}
+.login-heading{
+    color: #fff;
+    margin-left: 10px;
+
+}
+.head-p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+h3{
+    color: crimson;
+    text-decoration: underline;
+    width: 50%;
+}
+
+
+/* stepper personal information  */
+
+.photo{
+    text-align: center;
+    border: 5px dashed rgba(90, 87, 87, 0.411);
+    border-radius: 5px;
+    display: block;
+    width: 150px;
+    justify-content: center;
+    float: right;
+    height: 150px;
+}
+
+.photo input {
+    margin-top: 40%;
+    padding: 15px;
+    text-align: center;
+    font-size: 10px;
+}
+.photo :hover{
+    cursor: pointer;
+}
+    
+
+mat-form-field{
+width: 32%;
+padding: 4px;
+}
+
+.studentID{
+width: 151%;
+}
+.add{
+width: 306%;
+}
+.contact{
+ width: 151%;
+}
+
+/* Education details of Student */
+h2{
+    color: #DC143C;
+}
+.School{
+    padding: 20px;
+    width: 140%;
+ }
+ .Intermediate{
+    padding: 20px;
+    width: 140%;
+ }
+
+.qualification{
+   padding: 20px;
+   width: 140%;
+}
+/* Enclosures */
+.enclosure{
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration:underline;
+}
+
+/* Student / Guardian Sign */
+.sign{
+    width: 150%;
+    margin-top: 15px;
+    color: #DC143C;
+    margin-top: 55px;
+}
+.sign :hover{
+    cursor: pointer;
+}
+.sign_Guardian{
+    color: #DC143C;
+    margin-bottom: 55px;
+}
+.sign_Guardian :hover{
+    cursor: pointer;
+}
+
+/* Student-enclousure */
+
+.Student-enclousure{
+    color: #DC143C;
+}
+.Student-enclousure :hover{
+    cursor:pointer;
+} 
+/* End application */
+.End_application{
+    justify-content: right;
+    margin-right: 500px;
+    text-align: right;
+    margin-bottom: 65px;
+    
+}
+/* Course Applied For */
+.education{
+    font-family: Arial, Helvetica, sans-serif;
 }

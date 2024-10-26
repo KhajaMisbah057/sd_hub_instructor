@@ -1,58 +1,253 @@
-    
-    <div class="register-main">
-        <div class="head-login">
-            <link rel="stylesheet" href="registration.component.css">
+<!-- Main Logo Header -->
+
+<div class="register-main">
+  <div class="head-login">
+      <div class="img">
+         <img src="SD HUB LOGO.jpg" alt="SDHUB LOGO">
         </div>
-    </div>
-    <mat-stepper [linear]="isLinear" #stepper>
-        <mat-step [stepControl]="firstFormGroup">
-          <form [formGroup]="firstFormGroup">
-            <ng-template matStepLabel>Personal information</ng-template>
-            <h3 class="Application Information">Application Information<hr></h3>
-            <!-- Student Id -->
-        <mat-form-field>
-            <div class="studentid">
-              <mat-label>Student ID</mat-label>
-              <input matInput placeholder="Student ID" formControlName="firstCtrl" required>
-            </div>
-        </mat-form-field>
-
-            <!-- Application Date -->
-            <mat-form-field>
-                <div class="Date">
-                  <mat-label>Application Date </mat-label>
-                  <input matInput placeholder="Application Date" formControlName="firstCtrl" required>
-              
-                </div>
-            </mat-form-field>
+      <div class="login-heading">
+        <p class="head-p">Student Registration</p>
+        <h4><em>Skill Development Hub
+        </em>
+        </h4>
+      </div>
+     </div>
     
 
-            <div>
-              <button mat-button matStepperNext>Next</button>
-            </div>
-          </form>
-        </mat-step>
-        <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-          <form [formGroup]="secondFormGroup">
+  <!-- application details -->
+
+  <mat-stepper #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Personal Informartion</ng-template>
+          <h3>Application Information</h3>
+          
+          <!-- photo-upload -->
+
+          <div class="photo">
+            <input type="file" id="file-upload">
+          </div>
+
+          <!-- Student Personal Details -->
+
+          <div class="studentID">
             <mat-form-field>
-              <mat-label>Address</mat-label>
-              <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                     required>
+              <mat-label>Student ID</mat-label>
+              <input matInput placeholder="Enter Student ID" formControlName="studentID" required>
             </mat-form-field>
-            <div>
-              <button mat-button matStepperPrevious>Back</button>
-              <button mat-button matStepperNext>Next</button>
-            </div>
-          </form>
-        </mat-step>
-        <mat-step>
-          <ng-template matStepLabel>Done</ng-template>
-          <p>You are now done.</p>
+            <mat-form-field>
+              <mat-label>Application Date</mat-label>
+              <input matInput type="date" placeholder="Enter Application Date" formControlName="appDate" required>
+            </mat-form-field><br><br>
+          </div>
+          <div style="margin-top: 5%;">
+            <mat-form-field>
+              <mat-label>First Name</mat-label>
+              <input matInput type="text" placeholder="Enter your First name" formControlName="firstName" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Middle Name</mat-label>
+              <input matInput type="text" placeholder="Enter your Middle name" formControlName="middleName" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Last Name</mat-label>
+              <input matInput type="text" placeholder="Enter your Last name" formControlName="lastName" required>
+            </mat-form-field>
+          </div>
+
+            <!-- Father Personal Details -->
+
+          <mat-form-field>
+            <mat-label>Father's First Name</mat-label>
+              <input matInput type="text" placeholder="Enter First name" formControlName="f_firstName" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Father's Middle Name</mat-label>
+              <input matInput type="text" placeholder="Enter Middle name" formControlName="f_middleName" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Father's Last Name</mat-label>
+              <input matInput type="text" placeholder="Enter Last name" formControlName="f_lastName" required>
+            </mat-form-field><br><br>
+
+             <!-- Student's Personal Details -->
+
+            <mat-form-field>
+              <mat-label>Date of Birth</mat-label>
+              <input matInput type="date" placeholder="Enter your DOB" formControlName="dob" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Phone Number</mat-label>
+              <input matInput type="number" placeholder="Enter your Number" formControlName="phoneNumber" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput type="email" placeholder="Enter your Email" formControlName="email" required>
+            </mat-form-field><br><br>
+            <div class="add">
+            <mat-form-field>
+              <mat-label>Address (Permanent)</mat-label>
+              <textarea matInput></textarea>
+              <input matInput type="text" placeholder="Enter your Address" formControlName="address" required>
+            </mat-form-field><br>
+          </div>
+
+            <!-- Father Personal Details -->
+
+             <div class="contact">
+            <mat-form-field>
+            <mat-label>Parent/Guardian contact Details</mat-label>
+              <input matInput type="tel" placeholder="Phone Number" formControlName="p_contact" required>
+            </mat-form-field>
+            <mat-form-field>
+            <mat-label>Total Household Income</mat-label>
+              <input matInput type="tel" placeholder="Income" pattern="" formControlName="income" required>
+            </mat-form-field>
+          </div> 
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!-- Education details of Student -->
+
+      <mat-step [stepControl]="secondFormGroup" label="Education Details">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Education Details</ng-template>
+
+          <h3>Course Details*</h3>
+
+          <!-- <mat-form-field> -->
+            <div class="education">
+              <mat-label>Course Applying For:</mat-label>
+             <select name="Course" id="Course">
+              <option value="Web Development">Web Development</option>
+              <option value="Data analyst">Data Analyst</option>
+              <option value="Digital Marketing">Digital Marketing & Graphic Designing</option>
+              <option value="Tally">Accounting & Tally</option>
+              <option value="Office Administration">Office Administration</option>
+              
+            </select>
+              <!-- <input  matInput formControlName="secCtrl" placeholder="" required></div> -->
+            <!-- </mat-form-field> -->
+          
+          <!-- Schooling details of Student -->
+           <h2><hr>Qualification Details</h2>
+          <h3>School Details </h3>
+          <div class="School">
+          <mat-form-field>
+            <mat-label>School</mat-label>
+            <input matInput formControlName="Degree" placeholder="Enter your School name" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Year of Passing</mat-label>
+            <input input type="date" matInput  formControlName="Year" placeholder="Enter your Year of Passing" required>
+          </mat-form-field><br><br>
+          <mat-form-field>
+            <mat-label>Percentage/CGPA</mat-label>
+            <input matInput formControlName="Percentage" placeholder="Enter your Percentage/CGPA" required>
+          </mat-form-field>
+        </div>
+
+        <!-- intermediate details of Student -->
+        <h3>Intermediate Details </h3>
+        <div class="Intermediate">
+        <mat-form-field>
+          <mat-label>Intermediate</mat-label>
+          <input matInput formControlName="Degree" placeholder="Enter your Intermediate Collegename" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Year of Passing</mat-label>
+          <input input type="date" matInput  formControlName="Year" placeholder="Enter your Year of Passing" required>
+        </mat-form-field><br><br>
+        <mat-form-field>
+          <mat-label>Percentage/CGPA</mat-label>
+          <input matInput formControlName="Percentage" placeholder="Enter your Percentage/CGPA" required>
+        </mat-form-field>
+      </div>
+
+<!-- Degree details -->
+
+          <h3>Degree Details</h3>
+          <div class="qualification">
+          <mat-form-field>
+            <mat-label>College Name</mat-label>
+            <input matInput formControlName="Collegename" placeholder="Enter your College Name" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Year of Passing</mat-label>
+            <input input type="date" matInput  formControlName="Year" placeholder="Enter your Year of Passing" required>
+          </mat-form-field><br><br>
+          <mat-form-field>
+            <mat-label>Percentage</mat-label>
+            <input matInput formControlName="Percentage" placeholder="Enter your Percentage" required>
+          </mat-form-field></div>
+        
+          
+
+
           <div>
             <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
+            <button mat-button matStepperNext>Next</button>
           </div>
-        </mat-step>
-      </mat-stepper>
-</body>
-</html>
+        
+
+      <!-- Declaration of the  Student -->
+
+      <mat-step [stepControl]="thirdformGroup">
+        <form [formGroup]="thirdformGroup">
+        <ng-template matStepLabel>Declaration</ng-template>
+
+        <h3>Declaration and Submission</h3>
+        <h6><input type="checkbox" name="#" id="#">I Declare that all the information given is true and complete to the best of my Knowledge.I Understand that false or misleading Information may result in my rejection of the application.</h6>
+        
+
+          <!-- Student Signature Upload -->
+          <div class="sign">
+            <h5>Upload Student signature*</h5>
+            <input type="file" id="file-upload"><br><br>
+          </div>
+
+          <!-- Student Guardian Signature Upload -->
+          <div class="sign_Guardian">
+            <h5>Upload Student's Guardian signature*</h5><br>
+            <input type="file" id="file-upload">
+          </div>
+
+         <div class="enclosure"> 
+
+        <P>ENCLOSURES<P> </div>
+        <li>Passport size photo</li>
+        <li>Copy of Aadhar card</li>
+        <li>Copy of photo ID proof</li>
+        <li>Original certificate</li>
+        <li>Income certificate</li><br><br>
+
+        <div class="Student-enclousure">
+          <ul>
+            <li>Upload Previous Year Marks memo <br><input type="file"></li>
+            <li>Upload Aadhar<br><input type="file"></li>
+            <li>Upload Markssheet<br><input type="file"></li>
+            <li>Upload College ID card<br><input type="file"></li>
+            <li>Income Certificate<br><input type="file"></li></ul></div>
+
+         
+            
+              <button mat-button matStepperPrevious>Back</button>
+              <div class="End_application">
+              <button mat-button matStepperNext style="font-size:large;">Save Application</button>
+              </div>
+
+            <!-- <mat-step [stepControl]="FourthformGroup" label="Preview and Submit">
+              <form [formGroup]="FourthformGroup">
+                <ng-template matStepLabel>Preview and Submit</ng-template>  
+                <mat-form-field>
+                  <mat-label>Preview</mat-label>
+                  <input type="button" matInput formControlName="button" value="Submit Your Application" required>
+                                </mat-form-field>
+                                
+
+        </form>
+      </mat-step> -->
+    
